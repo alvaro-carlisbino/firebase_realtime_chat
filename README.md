@@ -8,14 +8,38 @@ Este projeto foi desenvolvido como parte do processo seletivo para desenvolvedor
 
 ## Funcionalidades
 
-- Autenticação de usuários (email/senha)
-- Sistema de cadastro com validações
-- Chat global em tempo real
-- Identificação visual de mensagens próprias e de outros usuários
-- Exibição de nome do remetente e timestamp
+### Autenticação
+- Sistema completo de autenticação com Firebase Auth
+- Registro de novos usuários com validação de email e senha
+- Login seguro com tratamento de erros
+- Logout e gerenciamento de sessão
+
+### Chat Global
+- Chat público em tempo real para todos os usuários
+- Sincronização instantânea via Firebase Realtime Database
+- Identificação visual de mensagens próprias vs. de outros usuários
+- Exibição de nome do remetente e timestamp formatado
 - Scroll automático para novas mensagens
-- Interface responsiva e intuitiva
+
+### Mensagens Privadas
+- Sistema de conversas privadas 1-a-1
+- Lista de conversas ordenada por última mensagem
+- Contador de mensagens não lidas
+- Indicador visual de mensagens não lidas
+- Marcação automática de mensagens como lidas
+
+### Indicadores de Digitação
+- Indicador em tempo real quando outro usuário está digitando
+- Auto-cancelamento após 3 segundos de inatividade
+- Sincronização via Firebase para múltiplos dispositivos
+- Feedback visual na interface do chat
+
+### Interface
+- Design moderno seguindo Material Design 3
 - Suporte a temas claro e escuro
+- Interface responsiva e adaptativa
+- Componentes reutilizáveis e modulares
+- Animações suaves e feedback visual
 
 ## Arquitetura
 
@@ -52,6 +76,32 @@ lib/
 - **Firebase Realtime Database** - Sincronização de mensagens em tempo real
 - **Provider** - Gerenciamento de estado
 - **Material Design 3** - Design system
+- **Mockito** - Testes unitários com mocks
+
+## Testes
+
+O projeto inclui testes unitários abrangentes para garantir a qualidade e confiabilidade do código:
+
+### Executando os Testes
+
+```bash
+# Executar todos os testes
+fvm flutter test
+
+# Executar com cobertura
+fvm flutter test --coverage
+
+# Executar um arquivo específico
+fvm flutter test test/viewmodels/auth_viewmodel_test.dart
+```
+
+### Cobertura de Testes
+
+- **Models**: Testes de serialização/deserialização e validação de dados
+- **ViewModels**: Testes de lógica de negócio, gerenciamento de estado e interação com services
+- **Services**: Testes de integração com Firebase (com mocks)
+
+Os testes utilizam **Mockito** para criar mocks dos serviços Firebase, permitindo testes isolados e rápidos sem dependência de serviços externos.
 
 ## Configuração do Ambiente
 
@@ -216,13 +266,15 @@ O projeto implementa múltiplas camadas de segurança:
 
 ## Melhorias Futuras
 
-- [ ] Implementação de salas de chat
-- [ ] Upload de imagens
-- [ ] Indicador de "digitando..."
-- [ ] Notificações push
-- [ ] Paginação de mensagens
-- [ ] Busca de mensagens
-- [ ] Testes unitários e de widget
+- [ ] Implementação de salas de chat em grupo
+- [ ] Upload de imagens e arquivos
+- [ ] Notificações push com FCM
+- [ ] Paginação de mensagens para otimizar performance
+- [ ] Busca de mensagens por texto
+- [ ] Emojis e reações em mensagens
+- [ ] Edição e exclusão de mensagens
+- [ ] Status de entrega e leitura (double check)
+- [ ] Backup e exportação de conversas
 
 ## Licença
 
