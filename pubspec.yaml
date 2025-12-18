@@ -1,0 +1,30 @@
+name: chat_app_firebase
+description: "Desafio Flugo - Chat App"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  firebase_core: ^3.8.1
+  firebase_auth: ^5.3.4
+  firebase_database: ^11.2.2
+
+  provider: ^6.1.2
+  intl: ^0.20.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true

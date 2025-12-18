@@ -1,0 +1,44 @@
+{
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "flugo-desafio",
+          "appId": "1:426558435758:android:09a3724c4573a01f68183f",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "flugo-desafio",
+          "appId": "1:426558435758:ios:3ccbdd140180ec6468183f",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "macos": {
+        "default": {
+          "projectId": "flugo-desafio",
+          "appId": "1:426558435758:ios:3ccbdd140180ec6468183f",
+          "uploadDebugSymbols": false,
+          "fileOutput": "macos/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "flugo-desafio",
+          "configurations": {
+            "android": "1:426558435758:android:09a3724c4573a01f68183f",
+            "ios": "1:426558435758:ios:3ccbdd140180ec6468183f",
+            "macos": "1:426558435758:ios:3ccbdd140180ec6468183f",
+            "web": "1:426558435758:web:4344192f96fdd55568183f",
+            "windows": "1:426558435758:web:695b0b29919e40ab68183f"
+          }
+        }
+      }
+    }
+  }
+}}
